@@ -1,5 +1,5 @@
 # Producer-Consumer-Problem
-Implementation of the producer-consumer problem using C shared memory functions
+Implementation of the bounded-buffer producer-consumer problem using C++ semaphores and shared memory functions
 
 ## Table of Contents
 - [Problem Description](#problem-description)
@@ -52,16 +52,17 @@ ___The problem arises due to the following constraints:___
 This problem implementation is meant for a UNIX-based kernel
 
 ## Running the program
-First off, make sure to be in the program directory. build the .o files using the makefile. Call the makefile usikng the command
+First off, make sure to be in the program directory. 
+Build the .o files using the makefile. Call the makefile usikng the command
 ```
 make
 ```
-Next, call the consumer by entering the following command with the buffer size you want as the argument. ex:
+Next, call the consumer by entering the following command with the buffer size you want as the argument. __ex:__
 ```
 ./consumer 200
 ```
 
-Now, from a separate terminal you can run
+Now, from any number of separate terminals you can run the producer. __ex:__
 ```
 ./producer NATURALGAS 7.1 0.5 200
 ```
